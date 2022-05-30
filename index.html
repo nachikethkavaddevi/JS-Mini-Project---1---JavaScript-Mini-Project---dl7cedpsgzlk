@@ -1,35 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <div class="game-area">
-            <div class="game-options">
-                <select name="game_type" id="game_type" onchange="resetAIButton()">
-                    <option value="3">3 x 3 Board</option>
-                    <option value="4">4 x 4 Board</option>
-                    <option value="5">5 x 5 Board</option>
-                </select>
-                <input type="checkbox" name="robot" checked="true" id="robot"> With Computer? <br/>
-                <input type="submit" value="Start Game" onclick="generateGame()" class="submit-button"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div id="container">
+        <!-- Starting Page -->
+        <div id="startingPage">
+            <h2>Tic Tac Toe</h2>
+            <div id="line"></div>
+            <h4>Select Which You Want To Be?</h4>
+            <div id="button">
+                <button id="playerX" class="choose">Player ( X )</button>
+                <button id="playerO" class="choose">Player ( O )</button>
             </div>
-    
-            <div id="game-board" class="game-board">
-                Please select your game from above, then press 'Start Game'.
-            </div>
-            <div class="score-card">
-                Player X Score: <span id="score-X">0</span> <br>
-                Player Y Score: <span id="score-Y">0</span>
-            </div>
-    
         </div>
-    
-        <script src="./App.js" async defer></script>
-    </body>
+        <!-- Main Page -->
+        <div id="mainPage">
+            <div id="headerBtns">
+                <button id="">X Turn</button>
+                <button id="O_Turn">O Turn</button>
+                <div id="showChange"></div>
+            </div>
+            <div id="gameBoard">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+        </div>
+        <!-- WInner Page -->
+        <div id="winner">
+            <h2 id="winnerName">Player X Win The Game!</h2>
+            <div id="button">
+                <button id="quit">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
